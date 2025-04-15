@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/section_3.css') }}"><!--O arquivo bip.css foi renomeado para section_4.css e adicionado na pasta /static/css-->
+
+<section class="section_03">
+      <img src="{{ url_for('static', filename='img/imagemsec03.png') }}" alt="Background Left" class="section_03_img_left">
+      <div class="section_03_title_container">
+        <h1 class="section_03_title">
+          Porque escolher a <span style="font-style: italic">bipstation</span>
+          <br />
+          para ser sua Agência de Tráfego Pago?
+        </h1>
+      </div>
+
+      <div class="section_03_carousel">
+        <button class="section_03_prev_btn">❮</button>
+
+        <div class="section_03_card_container">
+          <div class="section_03_card section_03_card_active">
+            <h2>Transparência</h2>
+            <p>Contrato, Feedback Semanal e Relatório de progresso.</p>
+          </div>
+          <div class="section_03_card">
+            <h2>Estratégia</h2>
+            <p>Segmentaremos os seus anúncios para as pessoas certas, da maneira certa.</p>
+          </div>
+          <div class="section_03_card">
+            <h2>Atendimento</h2>
+            <p>Atendimento humanizado, próximo e consultivo.</p>
+          </div>
+          <div class="section_03_card">
+            <h2>Resultados</h2>
+            <p>Você verá resultados desde o primeiro mês</p>
+          </div>
+        </div>
+
+        <button class="section_03_next_btn">❯</button>
+      </div>
+      <img src="{{ url_for('static', filename='img/imagemsec03.png') }}" alt="Background Right" class="section_03_img_right">
+    </section>

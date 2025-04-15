@@ -1,0 +1,191 @@
+/* ===== SECTION 6 ===== */
+
+
+
+.section_6_texto_titulo {
+    margin: 0 0 3.125rem 0;
+    font-size: 2.5rem;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Gotham Black';
+    color: #DAFF7C; /* Cor neon pra chamar atenção */
+}
+
+
+/* ===== CONTAINER GERAL DA SEÇÃO DE PARCEIROS ===== */
+.section_6_parceiros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro com leve transparência */
+    padding: 3rem 2rem;
+    border-radius: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    max-width: 750px;
+    margin: 2rem auto;
+    border: 2px solid #DAFF7C;
+    box-shadow: 0 0 15px #DAFF7C, 
+                0 0 30px rgba(218, 255, 124, 0.5),
+                inset 0 0 10px #DAFF7C; /* Brilho tanto fora quanto dentro */
+    min-height: 25rem;
+    width: 100%;
+}
+
+
+/* ===== CONTAINER INTERNO DO CARROSSEL (onde ocorre a animação) ===== */
+.section_6_parceiros_div_inner {
+    display: flex;
+    position: absolute;
+    left: 0;
+    will-change: transform; /* Otimiza a performance da animação */
+    align-items: center;
+    height: 100%;
+    gap: 3.125rem;
+}
+
+
+/* ===== CADA CARD DE PARCEIRO ===== */
+.section_6_parceiros_div_fotos {
+    display: flex;
+    background-color: #3A3434;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 21.875rem;
+    height: 10rem;
+    margin: -11.5rem 0 3.5rem 1.5rem;
+    padding: 0.625rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    flex-shrink: 0; /* Impede que o card encolha dentro do carrossel */
+    position: relative;
+    color: #ffffff;
+    border: 2px solid #DAFF7C;
+    box-shadow: 0 0 10px #DAFF7C, 0 0 20px #DAFF7C;
+    transition: transform 0.3s ease;
+}
+
+/* ===== HOVER COM EFEITO DE ESCALA + BRILHO ===== */
+.section_6_parceiros_div_fotos:hover {
+    transform: scale(1.02);
+    z-index: 1;
+    animation: borderPulse 1.5s infinite alternate; /* Animação de brilho na borda */
+}
+
+/* ===== ANIMAÇÃO DE BRILHO ===== */
+@keyframes borderPulse {
+    0% {
+        box-shadow: 0 0 10px #DAFF7C, 0 0 20px #DAFF7C;
+    }
+    100% {
+        box-shadow: 0 0 15px #DAFF7C, 0 0 30px #DAFF7C;
+    }
+}
+
+
+/* ===== IMAGEM DOS PARCEIROS ===== */
+.section_6_parceiros_div_fotos_img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: contain; /* Evita distorcer a imagem */
+    margin: 1rem 0 -30px 0;
+}
+
+
+/* ===== TEXTO ABAIXO DA IMAGEM ===== */
+.section_6_parceiros_div_fotos_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-family: 'Gotham Book';
+    font-size: 0.8rem;
+    padding: 0 1rem;
+    margin-top: -0.5rem auto;
+}
+
+
+/* ===== REMOVE EFEITOS NATIVOS (ANTES/DEPOIS) ===== */
+.section_6_parceiros_div_fotos::before, 
+.section_6_parceiros_div_fotos::after {
+    content: none; /* Remove pseudo-elementos que causavam bugs */
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (min-width: 344px) {
+    .section_6_parceiros_div_fotos {
+        width: 16rem;
+        height: 18rem;
+    }
+    .section_6_parceiros_div_fotos_img {
+        max-height: 12rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .section_6_parceiros_div {
+        padding: 2rem;
+    }
+    .session_6_parceiros_fotos {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        justify-content: center;
+    }
+    .section_6_parceiros_div_fotos {
+        width: 14rem;
+        height: 16rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .section_6_parceiros_div {
+        padding: 2.5rem;
+        margin: 2rem auto;
+        max-width: 90%;
+    }
+    .section_6_parceiros_div_fotos {
+        width: 16rem;
+        height: 18rem;
+    }
+    .section_6_parceiros_titulo {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .section_6_parceiros_div {
+        max-width: 1200px;
+    }
+    .section_6_parceiros_div_fotos {
+        gap: 2rem;
+        width: 18rem;
+        height: 20rem;
+    }
+    .section_6_parceiros_div_fotos_texto {
+        font-size: 1rem;
+    }
+}
+
+
+/* ===== EFEITO HOVER ADICIONAL ===== */
+.section_6_parceiros_div_fotos:hover {
+    transform: translateY(-5px); /* Levanta um pouquinho o card */
+    box-shadow: 0 0 15px #DAFF7C;
+    transition: all 0.3s ease;
+}
+
+
+/* ===== ESCONDE SCROLLBAR MAS MANTÉM FUNCIONALIDADE ===== */
+.section_6_parceiros_div_fotos::-webkit-scrollbar {
+    height: 0.3rem;
+}
+.section_6_parceiros_div_fotos::-webkit-scrollbar-thumb {
+    background: #DAFF7C;
+    border-radius: 0.5rem;
+}

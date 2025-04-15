@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}"><!--O arquivo bip.css foi renomeado para section_4.css e adicionado na pasta /static/css-->
+
+<footer id="contatos">
+    <div class="footer_wave">
+        <img src="{{ url_for('static', filename='sources/ondas.png') }}" alt="Onda decorativa">
+    </div>
+    <div class="footer_content">
+        <p class="footer_title">Gostou dos nossos serviços? Nos contate e <br>avance!</p>
+        <div class="footer_contacts">
+            <a href="https://wa.me/+5561920046457" target="_blank">
+                <img class="footer_whatsapp_black" src="{{ url_for('static', filename='sources/whatsapp_black.png') }}" alt="WhatsApp">
+            </a>
+            <a href="mailto:bipstation.contact@gmail.com" target="_blank">
+                <img class="footer_email" src="{{ url_for('static', filename='sources/email.png') }}" alt="Email">
+            </a>
+        </div>
+        <div class="footer_sections">
+            <div class="footer_services">
+                <strong>SERVIÇOS</strong>
+                <ul>
+                    <li>Gestão de Tráfego</li>
+                    <li>Consultorias</li>
+                    <li>Marketing de Conteúdo</li>
+                </ul>
+            </div>
+            <div class="social_icons">
+                <a href="https://www.facebook.com/bipstation1" target="_blank">
+                    <img src="{{ url_for('static', filename='sources/face.png') }}" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="{{ url_for('static', filename='sources/linkedin.png') }}" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/bip.station/" target="_blank">
+                    <img src="{{ url_for('static', filename='sources/inta.png') }}" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+window.addEventListener("scroll", function () {
+    let header = document.querySelector(".section1_cabecalho");
+
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = "black";
+        header.style.width = "100%";
+        header.style.marginLeft = "0"; // Remove a margem para ocupar toda a largura
+        header.style.transition = "all 0.3s ease"; // Suaviza a transição
+    } else {
+        header.style.backgroundColor = "transparent";
+        header.style.width = "65%";
+        header.style.marginLeft = "50px"; // Volta à posição original
+    }
+});
+</script>
+<script src="{{ url_for('static', filename='teste.js') }}"></script>
+<script src="{{ url_for('static', filename='js/section_01.js') }}"></script>
+<script src="{{ url_for('static', filename='js/section_02_03.js') }}"></script>
+<script src="{{ url_for('static', filename='js/section_06.js') }}"></script>
+<script>
+const hamburger = document.getElementById('hamburger');
+const menuLinks = document.getElementById('menuLinks');
+
+hamburger.addEventListener('click', () => {
+    menuLinks.classList.toggle('active');
+});
+// Script para corrigir a rolagem e evitar o "overlap" com o header fixo
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+
+const targetId = this.getAttribute('href').substring(1);
+const targetElement = document.getElementById(targetId);
+
+// Define o offset de acordo com a altura do seu header
+const offset = 70;  // Ajuste este valor para a altura do seu header
+
+window.scrollTo({
+    top: targetElement.offsetTop - offset,
+    behavior: 'smooth' // Rolagem suave
+});
+});
+});
+window.addEventListener("load", function () {
+    function ajustarQuebraDeLinha() {
+        let titulo = document.querySelector(".footer_title");
+        if (window.innerWidth <= 768) {
+            titulo.innerHTML = "Gostou dos nossos <br>serviços? <br> Nos contate e <br> avance!";
+        } else {
+            titulo.innerHTML = "Gostou dos nossos serviços? Nos contate e avance!";
+        }
+    }
+
+    ajustarQuebraDeLinha(); // Ajusta na primeira carga
+    window.addEventListener("resize", ajustarQuebraDeLinha); // Ajusta ao redimensionar
+});
+</script>

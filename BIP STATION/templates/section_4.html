@@ -1,0 +1,81 @@
+<!--Alterações de renomeção da section_4-->
+<div class="section_4_astronauta"></div>
+<section class="section_4">
+
+    <!--Inicio -> Modificado adicionando 'section_4_' no inicio das classes -->
+    <h1 class="section_4_secdepoi_h1"> Depoimentos </h1>
+    <div class="section_4_mae">
+        <section class="section_4_primeira">
+            <div class="section_4_div1">
+                <!-- Seta Esquerda -->
+                <img class="section_4_seta_esquerda" src="{{ url_for('static', filename='img/section_4/seta_esquerda.png') }}" alt="Seta Esquerda" onclick="mudarDepoimento(-1)">
+                <div class="section_4_pc">
+                    <!-- Perfil do cliente -->
+                     <!--Inicio -> Modificado adicionando 'section_4_id_' no inicio dos id's -->
+                    <img class="section_4_perfil" id="section_4_id_perfil" src="{{ url_for('static', filename='img/section_4/user.png') }}" alt="Perfil">
+                    <h3 id="section_4_id_nome_cliente" class="section_4_secdepoi_h3">Cliente 1</h3>
+                </div>
+                <!-- Seta Direita -->
+                <img class="section_4_seta_direita" src="{{ url_for('static', filename='img/section_4/seta_direita.png') }}" alt="Seta Direita" onclick="mudarDepoimento(1)">
+            </div>
+            <div class="section_4_caixa_de_txt">
+                <h2 class="section_4_secdepoi_h2">Relatos</h2>
+                <!-- Imagem do relato -->
+                
+                <img class="section_4_relato_imagem" id="section_4_id_relato_imagem" src="{{ url_for('static', filename='img/section_4/relato_01.jpeg') }}" alt="Relato">
+            </div>
+        </section>
+        <section class="section_4_segunda">
+            <div class="section_4_div3">
+                <h1 class="section_4_div3_text">Antes</h1>
+                <div class="section_4_grafico-container">
+                    <img class="section_4_grafico1" id="section_4_id_grafico1" src="{{ url_for('static', filename='img/section_4/grafico1.jpeg') }}" alt="Gráfico 1">
+                </div>
+                <h1 class = 'section_4_div3_text'>Depois</h1>
+                <div class="section_4_grafico-container">
+                    <img class="section_4_grafico2" id="section_4_id_grafico2" src="{{ url_for('static', filename='img/section_4/grafico2.jpeg') }}" alt="Gráfico 2">
+                </div>
+                <!--Fim-->
+                <!--Fim-->
+
+                </div>
+            </div>
+            <div class="section_4_section_segunda_botão2"> <!--Inico -> Atualizei o nome do botão adaptando a section_4. Que também foi atualizado na pasta /static/css/testes.css-->
+                <a href="https://wa.me/+5561920046457" class="section_4_section1_principal_botao_fale2" target="_blank" alt="Botão fale conosco2">Impulsione seus negócios!   🚀</a>
+                   <!--Atualizei o nome do botato adaptado a section_4. Que também foi atualizado na pasta /static/css/testes.css-->
+            </div>
+            <!--Fim-->
+        </section>
+    </div>
+</section>
+
+<script>
+    // Passa os dados do Flask para o JavaScript
+    const depoimentos = JSON.parse('{{ depoimentos | tojson | safe }}');
+
+    // Função para gerar o caminho completo das imagens
+    function gerarCaminho(caminhoRelativo) {
+        return "{{ url_for('static', filename='') }}" + caminhoRelativo;
+    }
+
+    let indexAtual = 0;
+
+    function mudarDepoimento(direcao) {
+        indexAtual += direcao;
+        if (indexAtual < 0) {
+            indexAtual = depoimentos.length - 1;
+        } else if (indexAtual >= depoimentos.length) {
+            indexAtual = 0;
+        }
+ 
+        //Inicio --> Modificado os id's adicionando 'section_4_id_' no inicio
+        // Atualizar o conteúdo do depoimento
+        document.getElementById("section_4_id_perfil").src = gerarCaminho(depoimentos[indexAtual].perfil);
+        document.getElementById("section_4_id_nome_cliente").textContent = depoimentos[indexAtual].nome;
+        document.getElementById("section_4_id_relato_imagem").src = gerarCaminho(depoimentos[indexAtual].relato);
+        document.getElementById("section_4_id_grafico1").src = gerarCaminho(depoimentos[indexAtual].grafico1);
+        document.getElementById("section_4_id_grafico2").src = gerarCaminho(depoimentos[indexAtual].grafico2);
+        //FIM
+    }
+</script>
+<!-- Fim -->

@@ -1,0 +1,172 @@
+.section2 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.section2_titulo {
+    font-size: 24px;
+    color: #DAFF7C;
+    font-family: 'Gotham Black';
+    margin-top: 50px;
+    text-align: center;
+}
+
+#equipe::before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin-top: -15px;
+    visibility: hidden;
+}
+
+.carousel_sc2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.funcio_00 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Gotham Black';
+}
+
+.funcio_00.active {
+    display: flex;
+}
+
+.img_profile {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-color: 10px;
+    /* border-radius: 50%; */
+    padding: 15px;
+}
+
+/* .img_profile a {
+    background-color: #DAFF7C;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+} */
+
+.carousel_sc2_fotos_equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    
+    border-radius: 50px; 
+}
+
+.carousel_sc2_fotos_equipe img {
+    width: 900px ;
+    max-width: 400px;
+    /* height: 400px;  */
+    object-fit: cover; /* Mantém proporção e corta bordas extras */
+    /* border-radius: 50%; */
+}
+
+
+.carousel_sc2_fotos_equipe h3 {
+    font-size: 20px;
+    color: #DAFF7C;
+    text-align: center;
+}
+
+.info_user {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.info_user p {
+    font-size: 28px;
+    color: #f4f4f4;
+    font-weight: bold;
+    font-family: 'Gotham Book';
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.funcio_00 {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    position: absolute;
+    width: 100%;
+}
+
+.funcio_00.active {
+    opacity: 1;
+    position: relative;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .info_user {
+        max-width: 90%;
+    }
+
+    .carousel_sc2_fotos_equipe img {
+        max-width: 250px;
+    }
+
+    .carousel_sc2_fotos_equipe h3 {
+        font-size: 18px;
+    }
+
+    .info_user p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .img_profile {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info_user {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .carousel_sc2_fotos_equipe img {
+        max-width: 200px;
+    }
+
+    .carousel_sc2_fotos_equipe h3 {
+        font-size: 16px;
+    }
+
+    .info_user p {
+        font-size: 14px;
+    }
+
+    .img_profile a {
+        font-size: 16px;
+        padding: 8px;
+    }
+}

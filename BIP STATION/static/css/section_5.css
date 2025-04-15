@@ -1,0 +1,209 @@
+.section5{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+.items{
+    height: 450px;
+    width: 200px;
+    display: grid;
+    position: relative;
+    background: black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px 5px #DAFF7C; /* Ajustando o brilho */
+    
+}
+
+
+.items::before, .items::after{
+    content: " ";
+    position: absolute;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    z-index: -1;
+    background: linear-gradient(45deg,  #DAFF7C, white,  #DAFF7C,  transparent, #DAFF7C,
+     white, transparent);
+    background-size: 300%;
+    border-radius: 8px;
+    animation: Animacao 8s linear alternate infinite;
+    
+}
+
+
+.items::after{
+    filter: blur(20px);
+
+}
+
+@keyframes Animacao{
+    to{
+        background-position: 0;
+    }
+    from{
+        background-position: 300%;
+    }
+
+}
+
+.quadros{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    justify-content: center;
+    width: 100%;
+    font-size: 15px;
+    margin: 0 0 150px 0;
+    
+}
+ 
+.titulo_servico_5 {
+    font-family: 'Gotham Black';
+    color: #DAFF7C;
+    font-size: 40px;
+    margin-bottom: 9%;
+    margin-top: 2%;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#servicos::before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin-top: 27px;
+    visibility: hidden;
+}
+
+
+
+.paragrafo{
+    font-size: 18px;
+    align-items: center;
+    position: relative;
+}
+
+.sub_div{
+    color: #DAFF7C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.titulo{
+    flex-grow: 1;
+}
+
+.saiba_mais{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 20px;
+}
+
+.saiba_mais:hover{
+    color: #DAFF7C;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+
+}
+
+.icons{
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+   flex-shrink: 0;
+
+}
+
+
+@keyframes colorChange{
+    100%{
+        color: #d9f7bb;
+        
+    }
+    100%{
+        color: #e1faa6;
+
+    }
+    100%{
+        color: #c7f359;
+
+    }
+    100%{
+        color: #bbf528;
+    }
+    100%{
+        color: #adee07;
+
+    }
+    
+}
+
+@media (max-width: 878px) {
+    .section5 {
+        display: flex;
+        align-items: center;
+    }
+
+    .quadros {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+}
+
+
+@media (max-width: 1154px) {
+
+    .section5 {
+        display: flex;
+        align-items: center;
+    }
+
+    .quadros {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .items {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .sub_div {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .saiba_mais {
+        justify-content: center;
+    }
+
+    .paragrafo {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+#parceiros::before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin-top: -47px;
+    visibility: hidden;
+    
+}

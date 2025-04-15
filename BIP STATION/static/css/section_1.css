@@ -1,0 +1,2057 @@
+@font-face {
+    font-family: 'Gotham Black';
+    src: url(/static/fonts/Gotham-Black.otf) format(opentype);
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url(/static/fonts/GothamBook.ttf) format(TrueType);
+}
+
+/* Estilo para a scrollbar */
+::-webkit-scrollbar {
+    width: 17px; /* Largura da scrollbar */
+    height: 17px; /* Altura da scrollbar (para rolagem horizontal) */
+}
+
+/* Estilo para a parte do "track" da scrollbar (onde o slider se move) */
+::-webkit-scrollbar-track {
+    background-color:transparent; /* Cor do fundo da scrollbar */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+/* Estilo para a parte "thumb" da scrollbar (o slider) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #DAFF7C, #4f843f); /* Gradiente entre verde claro e verde escuro */
+    border-radius: 10px; /* Borda arredondada do slider */
+}
+
+/* Estilo para quando o slider está sendo "hovered" */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #c9ff5f, #4a9f47); /* Gradiente com destaque ao passar o mouse */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    width: 100%;
+}
+
+.section1_cabecalho {
+    width: 65%;
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.section1_cabecalho_menu {
+    padding: 10px;
+    display: flex;
+    
+}
+
+.section1_cabecalho_menu_logo{
+    margin-top: -10px;
+}
+
+.section1_cabecalho_menu_logo_e_nome{
+    text-decoration: none;
+    font-family: 'Gotham Black';
+}
+
+.section1_cabecalho_menu_logo_e_nome_icone{
+    height: 50px;
+    width: 50px;
+    margin-left: 7px;
+}
+
+.section1_cabecalho_menu_logo_e_nome_nome{
+    color: #DAFF7C;
+    font-size: 1.0rem;
+}
+
+.section1_cabecalho_menu_link{
+    justify-content: space-between;
+    gap: 35px;
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: 45px;
+}
+
+.section1_cabecalho_menu_link_link{
+    text-decoration: none;
+    color: #DAFF7C;
+    margin-top: 10px;
+    font-family: 'Gotham Black';
+}
+
+.section1_cabecalho_menu_link_link:hover{
+    cursor: pointer;
+    color: white;
+    transition: color 0.3 ease;
+}
+
+.section1_hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.section1_hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #DAFF7C;
+    border-radius: 2px;
+}
+
+main{
+    margin-top: 125px;
+}
+
+.section1_principal{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.section1_principal_topo_direito {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Garante que as imagens se ajustem à largura total */
+    height: auto;
+    z-index: 15; /* Para ficar atrás do conteúdo */
+    display: flex;
+    justify-content: flex-end; /* Alinha à direita */
+}
+
+.section1_principal_topo_direito_verde_claro {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1; /* Camada de fundo */
+    height: 530px;
+    width: 840px;
+}
+
+.section1_principal_topo_direito_verde_escuro {
+    position: absolute;
+    margin-top: -50;
+    width: 850px; /* Ajuste conforme necessário */
+    z-index: 2; /* Fica sobre a imagem clara */
+    height: 550px;
+}
+
+.section1_principal_topo_direito_slogan{
+    position: absolute;
+    width: auto;
+    height: 450px;
+    z-index: 3;
+}
+
+.section1_principal_topo_direito_redes{
+    display: flex;  /* Faz os ícones ficarem lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Adiciona um espaço entre os ícones */
+    position: absolute;
+    margin-top: 60px; /* Ajuste conforme necessário */
+    margin-right: 263px; /* Ajuste conforme necessário */
+    z-index: 5;
+}
+
+.section1_principal_topo_direito_redes_face{
+    z-index: 4;
+    height: 40px;
+}
+
+.section1_principal_topo_direito_redes_instagram{
+    z-index: 4;
+    height: 40px;
+}
+
+.section1_principal_topo_direito_configuracoes{
+    z-index: 5;
+    margin-top: 15px;
+    margin-right: 20px;
+    height: 40px;
+    width: auto;
+}
+
+.section1_principal_decoracao{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 6;
+}
+
+.section1_principal_decoracao_fundo{
+    height: 40px;
+    width: auto;
+}
+
+.section1_principal_decoracao_bolinhas{
+    height: 40px;
+}
+
+.section1_principal_titulo {
+    color: white;
+    margin-top: 80px;
+    margin-right: 80px;
+    font-size: 3rem;
+    font-family: 'Gotham Book';
+    text-align: center;
+}
+
+.section1_principal_titulo_cor{
+    color: #DAFF7C;
+    font-family: 'Gotham Book';
+}
+
+.section1_principal_texto{
+    color: #F4F4F4;
+    margin-top: 80px;
+    margin-left: 80px;
+    font-size: 2rem;
+    width: 39%;
+    font-family: 'Gotham Black';
+}
+
+.section1_principal_oval1{
+    height: 80px;
+    width: 80px;
+    margin-left: 1000px;
+    margin-top: -150px;
+}
+
+.section1_principal_redes{
+    display: flex;
+    margin-top: 120px;
+    margin-left: 130px;
+}
+
+.section1_principal_redes_botoes_whatsapp_preto{
+    height: 50px;
+    width: 180px
+}
+
+.section1_principal_redes_botoes_gmail{
+    height: 50px;
+    width: 180px;
+}
+
+.section1_principal_oval2{
+    height: 80px;
+    width: 80px;
+    margin-left: 300px;
+}
+
+.section1_astronauta {
+    opacity: 0.5;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+.section1_astronauta img{
+    height: 850px;
+    width: 750px;
+}
+
+.section1_principal_imagens{
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 15;
+    height: auto;
+}
+
+.section1_principal_imagens_fundo{
+    height: 80px;
+    width: 80px;
+    z-index: 1;
+    margin-left: 55px;
+}
+
+.section1_principal_imagens_bolinhas{
+    height: 100px;
+    width: 100px;
+    z-index: 2;
+    margin-left: -88px;
+    margin-top: -10px;
+}
+
+.section1_principal_botao_fale {
+    height: 40px;
+    color: black;
+    padding: 18px;
+    background-color: #DAFF7C;
+    border-radius: 20px;
+    font-size: 1.7rem;
+    width: 300px; /* Definir um tamanho fixo ajuda na centralização */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    text-decoration: none;
+    font-family: 'Gotham Black';
+}
+
+.section1_principal_botao_fale:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.section1_principal_icone_whatsapp {
+    position: fixed;  /* Fixa na tela ao rolar a página */
+    bottom: 20px;  /* Distância do fundo */
+    right: 30px;  /* Distância da direita */
+    z-index: 100;  /* Garante que fique acima de outros elementos */
+}
+
+.section1_principal_icone_whatsapp_imagem {
+    height: 70px;  /* Ajuste conforme necessário */
+    width: auto;  /* Mantém proporção da imagem */
+}
+
+@media  (min-width:240px) and (max-width: 368px) {
+
+    .section1_cabecalho {
+        width: 100%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    .section1_hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+    .section1_hamburger span {
+        width: 10px;
+        height: 3px;
+        background: #DAFF7C;
+        border-radius: 2px;
+    }
+
+    .section1_cabecalho_menu_link {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 100px;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 110px;
+    }
+
+    .section1_cabecalho_menu_link.active {
+        display: flex;
+        font-size: 0.7rem;
+        gap:0;
+        margin-right: 0px;
+    }
+
+    .section1_cabecalho_menu_link_link {
+        margin: 10px 0;
+    }
+
+    .section1_principal_topo_direito{
+        height: 405px;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 81px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 84px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 71px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 20px;
+        margin-top: 103px;
+        margin-right: 28px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 9px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 9px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 1.1rem;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+    .section1_principal_texto{
+        font-size: 1rem;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .section1_principal_oval1{
+        width: 40px;
+        height: 40px;
+        margin-left: 280px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto{
+        width: auto;
+        height: 30px;
+    }
+
+    .section1_principal_redes_botoes_gmail{
+        width: auto;
+        height: 30px;
+    }
+
+    .section1_principal_oval2 {
+        width: 40px;
+        height: 40px;
+        margin-left: -31px;
+        margin-top: -92px;
+    }
+
+    .section1_astronauta img{
+        display: none;
+    }
+
+    .section1_principal_imagens{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .section1_principal_imagens_fundo{
+        width: auto;
+        height: 30px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 35px;
+        margin-left: -53px;
+        margin-top: -3px;
+    }
+
+    .section1_principal_botao_fale{
+        width: auto;
+        padding: 5px;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-left: 45px;
+
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        /* object-fit: contain;
+        display: block; */
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+}
+
+@media  (min-width:369px) and (max-width: 480px) {
+
+    main{
+        margin-top: 45px;
+    }
+
+    .section1_cabecalho {
+        width: calc(100% - 20px); /* ou apenas */
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    .section1_hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+    .section1_hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #DAFF7C;
+        border-radius: 2px;
+    }
+
+
+    .section1_cabecalho_menu_link {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 100px;
+    }
+
+    .section1_cabecalho_menu_link.active {
+        display: flex;
+        font-size: 0.7rem;
+        gap: 0;
+        margin-right: 0px;
+        opacity: 0.8;
+    }
+
+    .section1_cabecalho_menu_link_link {
+        margin: 10px;
+        text-align: left;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 105px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 109px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 92px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 20px;
+        margin-top: 108px;
+        margin-right: 40px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 12px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 12px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+
+    .section1_principal_titulo{
+        font-size: 1.0rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto{
+        font-size: 1.0rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1{
+        width: 40px;
+        height: 40px;
+        margin-left: 280px;
+
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto{
+        width: auto;
+        height: 30px;
+    }
+
+    .section1_principal_redes_botoes_gmail{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_oval2 {
+        width: 40px;
+        height: 40px;
+        margin-left: -31px;
+        margin-top: -92px;
+    }
+
+    .section1_astronauta img{
+        display: none;
+    }
+
+    .section1_principal_imagens{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .section1_principal_imagens_fundo{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_imagens_bolinhas{
+        width: auto;
+        height: 35px;
+        margin-left: -53px;
+        margin-top: 1px;
+    }
+
+    .section1_principal_botao_fale{
+        width: auto;
+        padding: 5px;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-left: 45px;
+
+    }
+    
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+}
+
+@media  (min-width:481px) and (max-width: 668px){
+
+    .section1_cabecalho {
+        width: 100%;
+        margin-left: 10px;
+        z-index: 10000;
+        position: fixed;
+        /* padding: 0px; */
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    .section1_hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+    .section1_cabecalho_menu_link {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 100px;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 110px;
+    }
+
+    .section1_cabecalho_menu_link.active {
+        display: flex;
+        font-size: 0.8rem;
+        gap:0;
+        margin-right: 0px;
+    }
+
+    .section1_cabecalho_menu_link_link {
+        margin: 10px 0;
+    }
+
+    .section1_principal_topo_direito {
+        height: 405px;
+        margin-left: -180px;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 115px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 119px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 97px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 30px;
+        margin-top: 127px;
+        margin-right: 87px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 1.1rem;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+    .section1_principal_texto{
+        font-size: 1rem;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .section1_principal_oval1{
+        width: 40px;
+        height: 40px;
+        display: none;
+        margin-left: 280px;
+
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto{
+        width: auto;
+        height: 30px;
+    }
+
+    .section1_principal_redes_botoes_gmail{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_oval2 {
+        width: 40px;
+        height: 40px;
+        display: none;
+        margin-top: -92px;
+    }
+
+    .section1_astronauta img{
+        display: none;
+    }
+
+    .section1_principal_imagens{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .section1_principal_imagens_fundo{
+        width: auto;
+        height: 30px;
+
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 35px;
+        margin-left: -53px;
+        margin-top: -3px;
+    }
+
+    .section1_principal_botao_fale{
+        width: auto;
+        padding: 5px;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-left: 45px;
+
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+}
+
+@media  (min-width:481px) and (max-width: 768px) {
+
+    .section1_cabecalho {
+        width: 100%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+        
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    .section1_hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+    }
+
+
+    .section1_cabecalho_menu_link {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 100px;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 110px;
+    }
+
+    .section1_cabecalho_menu_link.active {
+        display: flex;
+        font-size: 0.8rem;
+        gap: 0px;
+        margin-right: -5px;
+    }
+
+    .section1_cabecalho_menu_link_link {
+        padding: 4px;
+        margin-left: -15px;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 115px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 119px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 97px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 20px;
+        margin-top: 109px;
+        margin-right: 41px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 16px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 16px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+
+    .section1_principal_titulo {
+        font-size: 1.2rem;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.3rem;
+        margin-left: 50px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_oval1 {
+        margin-left: 500px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 130px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 45px;
+    }
+
+    .section1_principal_redes_botoes_gmail{
+        width: auto;
+        height: 45px;
+
+    }
+
+    .section1_principal_oval2 {
+        margin-left: 80px;
+        margin-top: -92px;
+    }
+
+    .section1_astronauta img{
+        display: none;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 80px;
+    }
+
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 60px;
+        margin-left: 55px;
+        margin-top: -20px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 75px;
+        margin-left: -105px;
+        margin-top: -30px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 250px;
+        padding: 10px;
+        font-size: 1.4rem;
+        margin-top: 0px;
+        margin-left: 105px;
+    }
+
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+}
+
+@media (min-width:769px) and (max-width: 878px) {
+
+    .section1_cabecalho {
+        width: 70%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 10px;
+        display: flex;
+        font-size: 1.0rem;
+        margin-right: 105px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito {
+        height: 405px;
+        margin-left: -90px;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 155px;
+        margin-top: 100px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 159px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 132px;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .section1_principal_topo_direito_redes{
+        height: 20px;
+        margin-top: 117px;
+        margin-right: 57px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 20px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 20px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        display: none;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        margin-left: 171px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left: -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 275px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }  
+}
+
+@media (min-width:879px) and (max-width: 1024px) {
+
+    .section1_cabecalho {
+        width: 70%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 10px;
+        display: flex;
+        font-size: 1.0rem;
+        margin-left: 5px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito {
+        height: 205px;
+        margin-left: -90px;
+        /* margin-top: 90px; */
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 155px;
+        margin-top: 0px;
+        width: auto;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 159px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 132px;
+        width: auto;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_redes{
+        height: 20px;
+        margin-top: 17px;
+        margin-right: 57px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 20px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 20px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        margin-left: 780px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        margin-left: 171px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left: -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 275px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+ 
+    
+}
+
+@media (min-width:1025px) and (max-width: 1280px) {
+
+    .section1_cabecalho {
+        width: 64%;
+        margin-left: 20px;
+        z-index: 300;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 11px;
+        display: flex;
+        font-size: 1.0rem;
+        margin-left: 8px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 265px;
+        /* margin-top: 104px; */
+        width: 450px;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 289px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        /* margin-top: 103px; */
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 232px;
+        width: auto;
+        /* margin-top: 100px; */
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 40px;
+        margin-top: 20px;
+        margin-right: 110px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        margin-left: 780px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        margin-left: 171px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left: -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 375px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+    
+}
+
+@media (min-width:1281px) and (max-width: 1440px) {
+
+    .section1_cabecalho {
+        width: 65%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 15px;
+        display: flex;
+        font-size: 1.2rem;
+        margin-right: 185px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 325px;
+        margin-top: 0px;
+        width: 530px;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 349px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 282px;
+        width: auto;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 40px;
+        margin-top: 30px;
+        margin-right: 140px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        margin-left: 780px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        margin-left: 171px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left
+        : -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 405px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+    
+}
+
+@media (min-width:1441px) and (max-width: 1770px) {
+
+    .section1_cabecalho {
+        width: 45%;
+        margin-left: 20px;
+        z-index: 10000;
+        position: fixed;
+    }
+
+    .section1_cabecalho_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .section1_cabecalho_menu_logo{
+        margin-top: 0;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_icone{
+        height: 35px;
+        width: auto;
+    }
+
+    .section1_cabecalho_menu_logo_e_nome_nome{
+        font-size: 0.8rem;
+    }
+
+    
+    .section1_cabecalho_menu_link {
+        justify-content: space-between;
+        gap: 15px;
+        display: flex;
+        font-size: 1.0rem;
+        margin-right: 185px;
+    }
+    
+    .section1_cabecalho_menu_link_link{
+        text-decoration: none;
+        color: #DAFF7C;
+        margin-top: 10px;
+        font-family: 'Gotham Black';
+    }
+    
+    .section1_cabecalho_menu_link_link:hover{
+        cursor: pointer;
+        color: white;
+        transition: color 0.3 ease;
+    }
+
+    .section1_principal_topo_direito_verde_claro {
+        height: 405px;
+        margin-top: 0px;
+        width: 690px;
+        z-index: 1;
+    }
+
+    .section1_principal_topo_direito_verde_escuro {
+        height: 439px;
+        width: auto;
+        z-index: 2;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_slogan {
+        height: 352px;
+        width: auto;
+        margin-top: 0px;
+    }
+
+    .section1_principal_topo_direito_redes {
+        height: 40px;
+        margin-top: 35px;
+        margin-right: 180px;
+    }
+
+    .section1_principal_topo_direito_redes_face{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_redes_instagram{
+        height: 30px;
+    }
+
+    .section1_principal_topo_direito_configuracoes{
+        display: none;
+    }
+
+    .section1_principal_titulo {
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_texto {
+        font-size: 1.4rem;
+        margin-left: 50px;
+    }
+
+    .section1_principal_oval1 {
+        margin-left: 980px;
+    }
+
+    .section1_principal_redes {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .section1_principal_redes_botoes{
+        width: auto;
+        height: 20px;
+        margin-left: 50px;
+    }
+
+    .section1_principal_redes_botoes_whatsapp_preto {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_redes_botoes_gmail {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_oval2 {
+        margin-left: 371px;
+        margin-top: -92px;
+    }
+
+    .section1_principal_imagens {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .section1_principal_imagens_fundo {
+        width: auto;
+        height: 50px;
+    }
+
+    .section1_principal_imagens_bolinhas {
+        width: auto;
+        height: 55px;
+        margin-left: -83px;
+        margin-top: 0px;
+    }
+
+    .section1_principal_botao_fale {
+        width: 20%;
+        padding: 5px;
+        font-size: 1.0rem;
+        margin-top: 0px;
+        margin-left: 555px;
+    }
+
+    .section1_principal_icone_whatsapp_imagem {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .section1_principal_icone_whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+    
+}

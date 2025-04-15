@@ -1,0 +1,38 @@
+<section class="section_6" id="parceiros"> 
+    <!-- Seção com o título "Parceiros", usada pra introduzir a parte dos parceiros -->
+    <div class="section_6_texto">
+        <h4 class="section_6_texto_titulo">Parceiros</h4>
+    </div>
+</section>
+
+<section class="section_6_parceiros">
+    <!-- Seção principal onde ficam os parceiros exibidos -->
+    <div class="section_6_parceiros_div">
+        
+        <!-- Primeiro parceiro: Mimosa FC -->
+        <div class="section_6_parceiros_div_fotos">
+            <div class="border-effect"></div> 
+            <!-- Div usada pra um efeito de borda animada ou estilizada -->
+            
+            <img src="{{ url_for('static', filename='img/Mimosa.png') }}" class="section_6_parceiros_div_fotos_img">
+            <!-- Imagem do parceiro, buscada da pasta 'static/img' -->
+            
+            <div class="section_6_parceiros_div_fotos_texto">
+                <h4>Mimosa FC</h4>
+                <p>Uma parceria que traz o melhor do café artesanal para os seus momentos especiais.</p>
+            </div>
+        </div>
+
+        <!-- Segundo parceiro: Padoca -->
+        <div class="section_6_parceiros_div_fotos">
+            <img src="{{ url_for('static', filename='img/Padoca.png') }}" class="section_6_parceiros_div_fotos_img">
+            <!-- Imagem do parceiro Padoca -->
+            
+            <div class="section_6_parceiros_div_fotos_texto">
+                <h4>Padoca</h4>
+                <p>Uma colaboração que une tradição e qualidade, com pães fresquinhos e deliciosos para tornar seus dias ainda mais saborosos.</p>
+            </div>
+        </div>
+
+    </div>        
+</section>

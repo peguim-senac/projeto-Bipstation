@@ -1,0 +1,74 @@
+.section1_cabecalho{
+    width: 65%;
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.section1_cabecalho_menu{
+    padding: 10px;
+    display: flex;
+    
+}
+
+.section1_cabecalho_menu_logo{
+    margin-top: -10px;
+}
+
+.section1_cabecalho_menu_logo_e_nome{
+    text-decoration: none;
+    font-family: 'Gotham Black';
+}
+
+.section1_cabecalho_menu_logo_e_nome_icone{
+    height: 50px;
+    width: 50px;
+    margin-left: 7px;
+}
+
+.section1_cabecalho_menu_logo_e_nome_nome{
+    color: #DAFF7C;
+    font-size: 1.0rem;
+}
+
+.section1_cabecalho_menu_link{
+    justify-content: space-between;
+    gap: 35px;
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: 45px;
+}
+
+.section1_cabecalho_menu_link_link{
+    text-decoration: none;
+    color: #DAFF7C;
+    margin-top: 10px;
+    font-family: 'Gotham Black';
+}
+
+.section1_cabecalho_menu_link_link:hover{
+    cursor: pointer;
+    color: white;
+    transition: color 0.3 ease;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #DAFF7C;
+    border-radius: 2px;
+}

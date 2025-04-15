@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BipStation</title>
+     <!--Inicio -> A pasta '4' foi desfeita e os arquivos renomeados e colocados em outros diretórios -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/teste.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/section_4.css') }}"><!--O arquivo bip.css foi renomeado para section_4.css e adicionado na pasta /static/css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/section_6.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/ICON - 1.png') }}" type="img/png"><!--As imagens da pasta '4' foram passadas para outra pasta section_4 dentro da pasta img-->
+    <!--Fim-->
+</head>
+<body>
+
+    {% include 'header.html' %}
+    
+    <main>
+        {% include 'section_1.html' %}
+        {% include 'section_2.html' %}
+        {% include 'section_3.html' %}
+        {% include 'section_4.html' %}
+        {% include 'section_5.html' %}
+        {% include 'section_6.html' %}
+    </main>
+    
+    {% include 'footer.html' %}
+</body>
+</html>

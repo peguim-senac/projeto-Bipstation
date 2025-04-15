@@ -1,0 +1,515 @@
+@import url(https://db.onlinewebfonts.com/c/bd317adf74e5e7e564eb61ce9926cc6d?family=Gotham);
+
+@font-face {
+    font-family: 'Gotham Black';
+    src: url(/Gotham-Black.otf) format(opentype);
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url(/GothamBook.ttf) format(TrueType);
+}
+ 
+:root{
+    --cor_base: #DAFF7C;
+}
+
+.section_4_astronauta {
+    background-image: url(/static/img/bg_astro.png);
+    opacity: 0.5;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
+
+.section_depoimenst {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Inicio --> Modificado a class e id cliente  adicionando 'section_4_id' no inicio */
+#section_4_id_nome_cliente {
+    margin-top: 20px;
+}
+
+/* Inicio --> Modificado a class section_4_secdepoi_h1 adicionando 'section_4_' no inicio */
+.section_4_secdepoi_h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 10%;
+    color: var(--cor_base);
+}
+
+/* Inicio --> Modificado a class e id cliente  adicionando 'section_4_id' no inicio */
+#section_4_id_depoimentos::before {
+    content: "";
+    margin-top: -27px;
+    display: block;
+    height: 80px;
+    visibility: hidden;
+}
+/* Fim */
+
+/* Inicio --> Modificado a class secdepoi_h3 adicionando 'section_4_' no inicio */
+.section_4_secdepoi_h3 {
+    text-transform: uppercase;
+    color: #fff;
+}
+/* Fim */
+
+/* Inicio --> Modificado a class secdepoi_h2 adicionando 'section_4_' no inicio */
+.section_4_secdepoi_h2{
+    background-color: rgb(77, 75, 75);
+    border-radius: 10px;
+    font-family: "Gotham Book";
+    text-transform: uppercase;
+    /* animation: colorChange 3s infinite;  
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4); */
+    color: #F4F4F4;
+}
+/* Fim */
+ 
+/* Inicio --> Modificado a class section_4_mae adicionando 'section_4_' no inicio */
+.section_4_mae {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    left: 300px;
+}
+/* Fim */
+
+/* Inicio --> Modificado as class primeira e segunda  adicionando 'section_4_' no inicio */
+.section_primeira, .section_4_segunda {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Fim */
+
+/* Inicio --> Modificado a div1 adicionando 'section_4_' no inicio */
+.section_4_div1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+/* Fim */
+
+/* Inicio --> Modificado a class perfil adicionando 'section_4_' no inicio */
+.section_4_perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border:3px solid #94D82D;
+}
+/* Fim */
+
+/* Inicio --> Modificado as class seta_esquerda e seta_direita cliente  adicionando 'section_4_' no inicio */
+.section_4_seta_esquerda, .section_4_seta_direita {
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+/* Fim */
+
+/* Inicio --> Modificado a class pc adicionando 'section_4_' no inicio */
+.section_4_pc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Fim */
+
+/* Inicio --> Modificado a class caixa_de_text cliente  adicionando 'section_4_' no inicio */
+.section_4_caixa_de_txt {
+    padding: 15px;
+    background-color: black;
+    font-size: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 90%;
+    position: relative;
+}
+/* Fim */
+
+
+.section_4_caixa_de_txt h2 {
+    margin-bottom: 10px;
+}
+
+/* Inicio --> Modificado a class div3 adicionando 'section_4_' no inicio */
+.section_4_div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+/* Fim */
+
+/* Inicio --> Modificado a class grafico_container adicionando 'section_4_' no inicio */
+.section_4_grafico-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+/* Fim */
+
+.section_4_primeira{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* Inicio --> Modificado a class relato-imagem adicionando 'section_4_' no inicio */
+.section_4_relato_imagem {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    max-width: 400px; /* Define uma largura máxima */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 20px; /* Bordas arredondadas */
+    margin-top: 10px; /* Espaçamento superior */
+    box-shadow: 0px 0px 10px 10px var(--cor_base); /* Sombra para destacar */
+  }
+/* Fim */
+
+/* Inicio --> Modificado a class secdepoi_h1 adicionando 'section_4_' no inicio */
+.section_4_grafico1, .section_4_grafico2 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+/* Fim */
+
+
+
+
+                                                                             /* ----------Animações--------- */
+
+                                                                             
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
+
+}
+
+/*Inicio --> Modificado o nome da classe do botao section1_principal_botao_fale2 adicionando 'section_4_' no inicio na pasta /bip_site/templates/section_4.html */
+.section_4_section1_principal_botao_fale2 {
+    height: 70px;
+    color: black;
+    padding: 18px;
+    background-color: #DAFF7C;
+    border-radius: 20px;
+    font-size: 1.7rem;
+    width: 300px; /* Definir um tamanho fixo ajuda na centralização */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto; /* Centraliza horizontalmente */
+    text-decoration: none;
+    font-family: 'Gotham Black';
+}
+
+@media (max-width: 480px) {
+    .section_4_section1_principal_botao_fale2 {
+        font-size: 1.4rem; /* Reduz um pouco o tamanho da fonte */
+        height: 60px; /* Ajusta a altura */
+        padding: 15px; /* Ajusta o espaçamento interno */
+    }
+}
+
+.section_4_section1_principal_botao_fale2:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+/* Fim */
+
+/* Inicio --> Modificado as classes caixa_de_text adicionando 'section_4_' no inicio */
+.section_4_caixa_de_txt::after, .section_4_caixa_de_txt::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), var(--cor_base),#eaebe8, var(--cor_base), var(--cor_base), transparent ); 
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 6s spin linear infinite;
+
+}
+
+.section_4_caixa_de_txt::before{
+    filter: blur(1.5rem);
+    opacity: 1;
+
+}
+/* Fim */
+
+/* Inicio --> Modificado as classes grafico_container adicionando 'section_4_' no inicio */
+.section_4_grafico-container::after, .section_4_grafico-container::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), var(--cor_base),#eaebe8, var(--cor_base), var(--cor_base), transparent ); 
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 6s spin linear infinite;
+
+}
+
+.section_4_grafico-container::before{
+    filter: blur(1.5rem);
+    opacity: 2;
+
+}
+/* Fim */
+
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg
+    }
+}
+
+/* Inicio --> Modificado as classes div3 e secdepoi_h1 adicionando 'section_4_' no inicio */
+.section_4_div3_text{
+    text-transform: uppercase;  
+    font-family: "Gotham Black";
+    font-weight: bold;
+    color: #fff;
+    /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4); */
+
+}
+/* Fim */
+
+@keyframes colorChange{
+    0%{
+        color: #d9f7bb;
+        
+    }
+    20%{
+        color: #e1faa6;
+
+    }
+    35%{
+        color: #c7f359;
+
+    }
+    50%{
+        color: #bbf528;
+    }
+    100%{
+        color: var(--cor_base);
+
+    }
+    
+}
+
+/* Inicio --> Modificado as classes seta_esquerda e seta_direita adicionando 'section_4_' no inicio */
+.section_4_seta_esquerda:hover, .section_4_seta_direita:hover{
+    opacity: 1;
+    box-shadow: 0px 0px 10px 10px var(--cor_base);
+    transform: scale(1);
+    transition: 0.5s;
+}
+/* Fim */
+
+/* Inicio --> Modificado as classes perfil adicionando 'section_4_' no inicio */
+.section_4_perfil{
+    box-shadow: 0px 0px 10px 10px var(--cor_base);
+    
+}
+/* Fim */
+
+
+@media (max-width: 768px) {
+    .section_4_mae {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.section_4_astronauta_depoimentos_img {
+    height: auto;
+    width: 40%;
+}
+
+
+@media (max-width: 1024px) {
+    .section_4_mae {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section_4_astronauta_depoimentos_img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section_4_secdepoi_h1 {
+        font-size: 2rem;
+    }
+
+    .section_4_perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .section_4_seta_esquerda, .section_4_seta_direita {
+        width: 25px;
+        height: 25px;
+    }
+
+    .section_4_astronauta_depoimentos_img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section_4_secdepoi_h1 {
+        font-size: 1.5rem;
+    }
+
+    .section_4_perfil {
+        width: 80px;
+        height: 80px;
+    }
+
+    .section_4_seta_esquerda, .section_4_seta_direita {
+        width: 20px;
+        height: 20px;
+    }
+
+    .section_4_caixa_de_txt {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 1024px) {
+    .section_4_mae {
+        left: 0;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .primeira, .section_4_segunda {
+        flex: 1 1 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section_4_div1 {
+        gap: 10px;
+    }
+
+    .section_4_seta_esquerda, .section_4_seta_direita {
+        width: 30px;
+        height: 30px;
+    }
+
+    .section_4_perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .section_4_relato_imagem, .section_4_grafico1, .section_4_grafico2 {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section_4_secdepoi_h1 {
+        font-size: 2rem;
+    }
+
+
+    .section_4_perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .section_4_caixa_de_txt {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .section_4_astronauta_depoimentos_img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section_4_secdepoi_h1 {
+        font-size: 1.5rem;
+    }
+
+    .section_4_seta_esquerda, .section_4_seta_direita {
+        width: 25px;
+        height: 25px;
+    }
+
+    .section_4_perfil {
+        width: 80px;
+        height: 80px;
+    }
+
+    .section_4_relato_imagem, .section_4_grafico1, .section_4_grafico2 {
+        max-width: 100%;
+    }
+
+    .section_4_astronauta_depoimentos_img {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+    .section_4_mae {
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+.section2 {
+    background-image: url(/static/img/bg_foguete.png);
+}
+
+@media (max-width: 480px) {
+	.section2 {
+        background-image: url('/static/img/bg_foguete_mobile.png');
+    }
+}
+
