@@ -10,7 +10,7 @@ Bem-vindo ao repositório do projeto **BiP Station**, uma aplicação web desenv
 A **BiP Station** é mais do que uma plataforma — é um **movimento digital**. Unimos **estratégia**, **criatividade** e **tecnologia** para transformar **cliques em clientes**. Aqui, oferecemos um ambiente intuitivo para empresas explorarem seus dados de campanha, otimizarem **funis de venda** e se conectarem com seu **público ideal**.
 
 ## 🖥️ Demonstração do Projeto
-![Interface do propjeto](Bip_Station.jpe)
+![Interface do propjeto](Bip_Station.jpeg)
 
 
 ## 🛠️ Tecnologias Utilizadas
